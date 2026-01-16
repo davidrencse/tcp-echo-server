@@ -185,15 +185,3 @@ All clients should work concurrently.
 
 ---
 
-## Suggested next upgrades
-
-If you want to evolve this from “echo server” to “real protocol server”:
-
-* Add command parsing: `PING`, `TIME`, `ECHO`, `QUIT`
-* Add message framing (length-prefix) for binary-safe messages
-* Add client connection table + stats
-* Replace thread-per-client with async IO (IOCP) for scalability
-* Add basic rate limiting / timeouts for defensive hardening
-
----
-
